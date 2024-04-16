@@ -1,0 +1,3 @@
+0 Birds
+1 Squirrels
+2 Background
