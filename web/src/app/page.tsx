@@ -1,9 +1,20 @@
-import Link from "next/link";
+import CountChart from "~/components/CountChart";
+import TypeSummary from "~/components/TypeSummary";
 
 export default function HomePage() {
-  return (
-    <main className="flex min-h-screen flex-col items-center justify-center bg-gradient-to-b from-[#2e026d] to-[#15162c] text-white">
 
+  
+
+  return (
+    <main className="ml-4 mt-10 flex flex-col">
+      <div className="mb-8 text-xl font-semibold">My Dashboard</div>
+      <div className="mt-4 grid grid-cols-2">
+        <TypeSummary />
+        <div className=" row-span-2">
+          <CountChart />
+        </div>
+        <div className="h-40"></div>
+      </div>
     </main>
   );
 }
