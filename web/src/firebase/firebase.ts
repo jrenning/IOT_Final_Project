@@ -2,15 +2,13 @@
 
 // Your web app's Firebase configuration
 
-import { initializeApp, getApps } from "firebase/app";
+import "dotenv/config";
+import { getApps, initializeApp } from "firebase/app";
 import {
-  getAuth,
-  connectAuthEmulator,
-  signInWithCustomToken,
+  getAuth
 } from "firebase/auth";
 import { getFirestore } from "firebase/firestore";
 import { getStorage } from "firebase/storage";
-import "dotenv/config"
 
 
 export const firebaseConfig = {
@@ -23,7 +21,6 @@ export const firebaseConfig = {
   appId: "1:103877995495:web:0ebb214923903f4a0a6b42",
 };
 
-console.log(firebaseConfig)
 
 export const firebaseApp =
   getApps().length === 0 ? initializeApp(firebaseConfig) : getApps()[0];

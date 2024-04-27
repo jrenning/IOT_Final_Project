@@ -1,20 +1,18 @@
 import { getStorage, ref, getDownloadURL } from "firebase/storage";
 
-export function getImageByURL(url: string) {
+export async function getImageByURL(url: string) {
   const storage = getStorage();
   const linkRef = ref(storage, url);
-  getDownloadURL(linkRef)
+  const url_link = await getDownloadURL(linkRef)
     .then((url) => {
-      // `url` is the download URL for 'images/stars.jpg'
 
-      // Or inserted into an <img> element
-      const img = document.getElementById("myimg");
-      if (img) {
-        img.setAttribute("src", url);
-      }
+      return url
+
     })
     .catch((error) => {
       console.log(error);
       // Handle any errors
     });
+
+    return url_link
 }
