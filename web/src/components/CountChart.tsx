@@ -10,12 +10,26 @@ type Props = {
 
 function CountChart({count_data}: Props) {
 
-  console.log(count_data)
+  
   //@ts-ignore
   let bird_data = Object.keys(count_data.birds).map((key)=> {return {x: key, y: count_data.birds[key]}})
   let squirrel_data = Object.keys(count_data.squirrels).map((key) => {
     //@ts-ignore
     return { x: key, y: count_data.squirrels[key] };
+  });
+
+  bird_data.sort((a, b)=> {if (new Date(a.x) > new Date(b.x)) {
+    return 1
+  } else {
+    return -1
+  }})
+
+  squirrel_data.sort((a, b) => {
+    if (new Date(a.x) > new Date(b.x)) {
+      return 1;
+    } else {
+      return -1;
+    }
   });
 
 
@@ -35,6 +49,7 @@ function CountChart({count_data}: Props) {
     ];
   return (
     <div className="w-[30rem] h-[30rem]">
+      <div className="font-semibold text-lg flex justify-center">This Week's Events</div>
       <ResponsiveLine
         data={data}
         margin={{ top: 50, right: 110, bottom: 50, left: 60 }}

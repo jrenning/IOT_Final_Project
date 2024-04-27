@@ -45,6 +45,7 @@ export default function TypeSummary({ count_data }: Props) {
 
   return (
     <div className="h-[30rem] w-[30rem]">
+      <div className="text-lg font-semibold flex justify-center">Events by Day of the Week</div>
       <ResponsiveBar
         data={new_data}
         keys={["squirrel", "bird"]}

@@ -32,7 +32,7 @@ export default function HomePage() {
                 src={d.image_url}
                 className="h-[12rem] w-[15rem] object-contain"
               ></img>
-              <div className="text-lg">{d["detection type"]}</div>
+              <div className="text-lg">{d["detection type"].slice(0, -1)}</div>
               <div className="font-semibold">
                 {prettifyDate(new Date(d.timestamp))}
               </div>

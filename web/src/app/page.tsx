@@ -69,9 +69,9 @@ type CountData = {
             <RecentEvent />
           </div>
           <div className="mb-8 text-xl font-semibold">My Dashboard</div>
-          <div className="mt-4 grid lg:grid-cols-2">
+          <div className="mt-4 grid lg:grid-cols-2 place-items-center justify-center items-center">
             {dayData && <TypeSummary count_data={dayData} />}
-            <div>{countData && <CountChart count_data={countData} />}</div>
+            <>{countData && <CountChart count_data={countData} />}</>
           </div>
         </main>
       ) : <div className="flex mt-[10rem] justify-center">Please Sign In to View...</div>}

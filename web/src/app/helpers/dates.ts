@@ -18,7 +18,7 @@ export function prettifyDate(date: Date) {
 
 
 
-	return `${month_names[date.getMonth()]} ${getLeadingZeroFormat(date.getDate())} ${date.getFullYear()} ${date.getHours()}:${date.getMinutes()}`
+	return `${month_names[date.getMonth()]} ${getLeadingZeroFormat(date.getDate())} ${date.getFullYear()} ${date.getHours()}:${getLeadingZeroFormat(date.getMinutes())}`
 }
 
 export function onSameDay(d1: Date, d2: Date) {
