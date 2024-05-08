@@ -12,11 +12,11 @@ squirrel, however, then a noise will play and startle the squirrel.
 ### Physical components
 
 - [x] Build birdhouse
-- [ ] Construct feeder
+- [x] Construct feeder
 - [x]  Set up motor for dispenser
 - [x]  Wire motor into PI for control
-- [ ]  Setup motion sensor
-- [ ]  Setup camera
+- [x]  Setup motion sensor
+- [x]  Setup camera
 
 ### Software components
 
@@ -29,8 +29,8 @@ squirrel, however, then a noise will play and startle the squirrel.
   - [x] Send to firebase
 - [x] Sensor data
   -  [x] Send sensor data to firebase
-- [ ] Analytics
-  - [ ] Perform analytics on data
+- [x] Analytics
+  - [x] Perform analytics on data
 - [x] Security
-- [ ] Website
+- [x] Website
 
